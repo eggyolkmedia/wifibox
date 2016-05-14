@@ -1,7 +1,7 @@
 #ifndef __BOX_H_
 #define __BOX_H_
 
-#include "libs/message.h"
+#include "message.h"
 
 void logMsg(const String& message);
 void initializeBox();

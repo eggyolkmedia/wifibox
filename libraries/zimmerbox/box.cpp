@@ -1,7 +1,7 @@
 #include <ESP8266WiFi.h>
 #include <WiFiClient.h>
 #include <WiFiServer.h>
-#include "libs/message.h"
+#include "message.h"
 #include "constants.h"
 #include "box.h"
 
