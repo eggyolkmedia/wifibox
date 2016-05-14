@@ -1,5 +1,4 @@
-#define MSG_DELIM ' '
-
+#include "codes.h"
 #include "message.h"
 
 Message::Message(const String& str) : _str(str), _pos(0) {}
@@ -31,5 +30,3 @@ const String Message::nextStr() {
 int Message::nextInt() {
   return nextStr().toInt();
 }
-
-

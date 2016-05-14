@@ -2,6 +2,7 @@
 #define __BOX_H_
 
 #include "message.h"
+#include "response.h"
 
 #define REQ_STATUS "STATUS"
 #define REQ_ID "ID"
@@ -9,13 +10,12 @@
 #define REQ_SEND "SEND"
 #define REQ_ECHO "ECHO" // "ECHO <VALUE>" --> "OK <VALUE>"
 
-#define RES_OK "OK" 
-#define RES_ERR "ERR"
-
-
 void logMsg(const String& message);
 void initializeBox();
-const String handleMessage(Message& msg);
+
+bool isSupportedCmd(const String& cmd);
+const Response handleStatusRequest();
+const Response handleRequest(const String& cmd, Message& args);
 
 #endif
 

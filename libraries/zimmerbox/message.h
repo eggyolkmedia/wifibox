@@ -6,7 +6,9 @@
 class Message {
 public:
   Message(const String& str);
+  
   const String& getMessage();
+
   bool hasNext();
   const String nextStr();
   int nextInt();

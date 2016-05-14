@@ -1,14 +1,16 @@
 #include <box.h>
+#include <response.h>
+
+bool isSupportedCmd(const String& cmd) {
+  return cmd == REQ_ECHO;
+}
+const Response handleStatusRequest() {
+  return Response::ok();
+}
 
 void initializeBox() { }
 
-const String handleMessage(Message& msg) {  
-  const String cmd = msg.nextStr();
-  if (cmd == REQ_STATUS) {
-    return RES_OK;
-  } else if (cmd == REQ_ECHO) {
-    const String response = msg.nextStr();
-    return String(RES_OK) + " " + response;
-  }  
+const Response handleRequest(const String& cmd, Message& args) {
+  return Response::ok().addStr(args.nextStr());
 }
 
