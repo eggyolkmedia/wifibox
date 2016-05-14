@@ -2,30 +2,24 @@
 #include <WiFiClient.h>
 #include <WiFiServer.h>
 #include "message.h"
-#include "constants.h"
 #include "box.h"
+#include "config.h"
 
 #define COMM_INIT_DELAY 1000
 #define COMM_TIMEOUT 2500
 #define COMM_CONNECT_DELAY 100
 
-#define PRINT_TO_SERIAL true
-
-#define PORT 1
-#define SSID "ssid"
-#define PASS "pass"
-
 WiFiServer server(PORT);
 
 // TODO MOVE TO LIBRARY
 void logMsg(const String& message) {
-#ifdef PRINT_TO_SERIAL
+#ifdef DEBUG
   Serial.print(message);
 #endif
 }
 
 void setup() {
-#ifdef PRINT_TO_SERIAL
+#ifdef DEBUG
   Serial.begin(9600);
 #endif
 

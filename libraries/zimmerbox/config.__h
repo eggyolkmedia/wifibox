@@ -1,0 +1,7 @@
+// Config goes here
+// Rename to config.h
+
+#define DEBUG true  // if true, boxes print logs to Serial
+#define PORT 80
+#define SSID "ssid"
+#define PASS "pass"

@@ -7,13 +7,13 @@ IR::IR(int pin, int delay, int lag) {
   _lag = lag;
 }
 
-void IR::Emit(int length, int* intervals) {
+void IR::emit(int length, int* intervals) {
   for (int i=0; i<length; i+=2) {
-    EmitPulse(intervals[i], intervals[i+1]);
+    emitPulse(intervals[i], intervals[i+1]);
   }
 }
 
-void IR::EmitPulse(long on, long off) {  
+void IR::emitPulse(long on, long off) {  
   digitalWrite(_pin, HIGH);
   cli();  // this turns off any background interrupts
   while (on > 0) {

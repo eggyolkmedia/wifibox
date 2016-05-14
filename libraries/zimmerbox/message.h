@@ -5,15 +5,15 @@
 
 class Message {
 public:
-	Message(const String& str);
+  Message(const String& str);
   const String& getMessage();
-	bool hasNext();
-	const String nextStr();
+  bool hasNext();
+  const String nextStr();
   int nextInt();
 
 private:
-	const String& _str;
-	int _pos;
+  const String& _str;
+  int _pos;
 };
 
 #endif

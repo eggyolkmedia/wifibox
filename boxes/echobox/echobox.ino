@@ -1,5 +1,4 @@
 #include <box.h>
-#include <constants.h>
 
 void initializeBox() { }
 

@@ -4,12 +4,12 @@
 class IR {
   public:
     IR(int pin, int delay, int lag);
-    void Emit(int length, int* command);
+    void emit(int length, int* command);
   private:
     int _pin;
     int _delay;
     int _lag;
-    void EmitPulse(long on, long off);
+    void emitPulse(long on, long off);
 };
 
 #endif
